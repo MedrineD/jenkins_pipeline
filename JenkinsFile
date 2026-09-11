@@ -1,0 +1,55 @@
+pipeline{
+    agent any
+    stages{
+        stage('Build'){
+            steps{
+                echo "Stage: Build"
+                echo 'Task description: Compile and package the source code with the required libraries.'
+                echo 'Build automation tool: Maven'
+            }    
+        }
+        stage('Unit and Integration Tests'){
+            steps{
+                echo "Stage: Unit and Integration Tests"
+                echo 'Task description: Run unit tests to ensure the code functions as expected and run integration tests to ensure the different components of the application work together as expected.'
+                echo 'Unit tests tool: JUnit'
+                echo 'Integration tests tool: REST Assured'
+            }   
+        }
+        stage('Code Analysis'){
+            steps{
+                echo "Stage: Code Analysis"
+                echo 'Task description: Analyse the code for bugs and code smells against industry standards, ensuring that they comply to the standards.'
+                echo 'Code analysis tool: SonarQube'
+            }    
+        }
+        stage('Security Scan'){
+            steps{
+                echo "Stage: Security Scan"
+                echo 'Task description: Scan the source code to identify any vulnerabilities and weaknesses.'
+                echo 'Security scan tool: Snyk'
+            }
+        }
+        stage('Deploy to Staging'){
+            steps{
+                echo "Stage: Deploy to Staging"
+                echo 'Task description: Deploy the application to a staging server for final validation.'
+                echo 'Deploy to staging tool: Docker'
+            }   
+        }
+        stage('Integration Tests on Staging'){
+            steps{
+                echo "Stage: Integration Tests on Staging"
+                echo 'Task description: Run integration tests on the staging environment to ensure the application functions as expected in a production-like environment.'
+                echo 'Integration tests on staging tool: Cypress'
+            }   
+        }
+        stage('Deploy to Production'){
+            steps{
+                echo "Stage: Deploy to Production"
+                echo 'Task description: Deploy the application to a production server for use by end users.'
+                echo 'Deploy to production tool: Docker'
+            }   
+        }
+    }
+}
