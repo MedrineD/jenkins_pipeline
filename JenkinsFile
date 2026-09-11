@@ -50,6 +50,7 @@ pipeline{
                 echo 'Task description: Deploy the application to a production server for use by end users.'
                 echo 'Deploy to production tool: Docker'
                 echo 'Kubernetes can also be used as a tool to deploy'
+                echo 'This is the final stage'
             }   
         }
     }
