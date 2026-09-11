@@ -49,6 +49,7 @@ pipeline{
                 echo "Stage: Deploy to Production"
                 echo 'Task description: Deploy the application to a production server for use by end users.'
                 echo 'Deploy to production tool: Docker'
+                echo 'This is the last stage'
             }   
         }
     }
